@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-24",
+  "top": "先处理今天必须你动手的那一件",
+  "todo": [
+    {
+      "priority": "高",
+      "status": "进行中",
+      "source": "微信",
+      "session": "示例客户群",
+      "time": "09:12",
+      "title": "确认明天路演是否出席",
+      "text": "对方问明天路演能不能去，还没回。",
+      "deadline": "11-25 14:30",
+      "links": [
+        {
+          "label": "文档：议程",
+          "kind": "文档",
+          "url": "https://example.com/agenda",
+          "who": "",
+          "session": "示例客户群",
+          "time": "09:12",
+          "deadline": "",
+          "source": "微信"
+        }
+      ],
+      "new": "本次",
+      "date": "2026-11-24"
+    }
+  ],
+  "clients": [
+    {
+      "client": "示例客户",
+      "project": "试用方案",
+      "stage": "等确认",
+      "blocker": "等对方确认报价",
+      "contact": "对接人备注",
+      "session": "示例客户群",
+      "time": "09:12",
+      "date": "2026-11-24",
+      "amount": "",
+      "links": [],
+      "source": "微信"
+    }
+  ],
+  "know": [
+    {
+      "title": "某产品发布了工作台更新",
+      "source": "飞书",
+      "session": "产品交流群",
+      "time": "10:01",
+      "links": [
+        {
+          "label": "文章：更新说明",
+          "kind": "文章",
+          "url": "https://example.com/post"
+        }
+      ],
+      "new": "本次",
+      "date": "2026-11-24"
+    }
+  ],
+  "topics": [
+    {
+      "title": "企业里该用哪套办公 Agent",
+      "source": "飞书",
+      "session": "社区群",
+      "time": "11:20",
+      "links": [],
+      "new": "本次",
+      "date": "2026-11-24"
+    }
+  ],
+  "resolved": [],
+  "withdrawn": [],
+  "todo_parked": [],
+  "todo_rule": {
+    "since": "2026-11-24",
+    "rule": "要处理的只放今天还得动手的，或近几日有截止日期的，尽量不超过约 12 条；已在客户与商单且这轮在等对方的不重复；同一人多件事合并；低优先级超过 3 天无新进展的欠回复收入 todo_parked，傍晚档一行汇总，有新消息或截止日期临近再抬回。不要标成已解决或已撤下。",
+    "applied": ""
+  },
+  "page_url": "https://example.com/page",
+  "feishu_day_node": {
+    "title": "2026-11-24 小时情报",
+    "node_token": "<DAY_NODE_TOKEN>",
+    "obj_token": "<DAY_OBJ_TOKEN>",
+    "parent_node_token": "<MONTH_NODE_TOKEN>",
+    "url": "https://example.com/wiki/day"
+  },
+  "last_scan_until": {
+    "wechat": "2026-11-24 13:00",
+    "feishu": "2026-11-24 13:00",
+    "sns": "2026-11-24 13:00"
+  },
+  "coverage": {
+    "window": ""
+  },
+  "coverage_log": [],
+  "skipped": [],
+  "last_run": "",
+  "pending_checks": ""
+}

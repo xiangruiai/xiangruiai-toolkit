@@ -1,0 +1,16 @@
+# 运行时状态、原始扫描和卡片都可能含聊天内容，不要提交
+data/
+raw/
+config/
+*.local.yaml
+*.local.json
+.env
+daily-*.json
+page-*.tsx
+wd_*.txt
+sns_*.txt
+key-chats.txt
+months.tsv
+__pycache__/
+*.pyc
+.DS_Store
