@@ -1,0 +1,64 @@
+# 复制为 config.local.yaml（已在 .gitignore 中忽略），填入你自己的值。
+# 不要把真实 token、open_id、聊天记录或密钥提交到仓库。
+
+timezone: Asia/Shanghai
+
+schedule:
+  times: ["09:00", "13:00", "18:00"]
+  # 窗口内没有新增或变化时，建议跳过飞书卡片，只更新状态里的 last_scan_until
+  quiet_if_no_change: true
+
+paths:
+  # 状态文件、原始扫描放在本地数据目录，不要写进 skill 或记忆
+  state_dir: ./data
+  raw_dir: ./raw
+  vchat: vchat          # 或 ~/.local/bin/vchat
+  lark_cli: lark-cli
+
+wechat:
+  ls_limit: 400
+  history_n: 800
+  # 用你自己的显示名搜被提到但没 @ 的消息；不要把这个写进开源 skill 正文
+  mention_name: "<YOUR_WECHAT_NAME>"
+  # 朋友圈：sns-ls -n 150；sns-mentions 往往只有评论人和时间，读不到评论正文
+  sns_n: 150
+
+feishu:
+  # 读取一律 --as user；只有发给自己的卡片用 --as bot
+  card_as_bot: true
+  card_target: self
+  # 用于搜被提到但没 @ 的消息，以及本人发出的承诺
+  my_name: "<YOUR_NAME>"
+  my_open_id: "<YOUR_OPEN_ID>"   # 形如 ou_...
+  # 机器人、自己给自己的会话、客服会话等，采集后可跳过
+  skip_chat_ids: []
+  # 搜索可能漏消息的重点会话，每次用 im +chat-messages-list 补拉
+  # 把 chat_id 一行一个写在本地文件，不要提交
+  key_chats_file: ./config/key-chats.txt
+  wiki:
+    enabled: true
+    space_id: "<YOUR_SPACE_ID>"
+    # 小时情报的父节点（其下再按月建节点）
+    parent_node_token: "<PARENT_NODE_TOKEN>"
+    day_title: "{date} 小时情报"
+    month_title: "{year}-{month}"
+    # 本地月份到 node_token 的对照，勿提交真实 token
+    months_file: ./config/months.tsv
+
+page:
+  # Cursor / Grok Page 是可选输出；没有 Page 工具时只发卡片和写日节点
+  enabled: true
+  title: "小时情报 · {mm-dd}"
+
+conventions:
+  # 以下都是建议默认值，可按自己的节奏改
+  todo_limit: 12
+  park_low_priority_after_days: 3
+  park_summary_at: "18:00"
+  no_duplicate_waiting_on_client: true
+  merge_same_person: true
+
+outputs:
+  card: true
+  wiki: true
+  page: true
